@@ -1,0 +1,260 @@
+/* Landing page */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  color: #333;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 5%;
+  background-color: #ffffff;
+}
+
+.logo img {
+  width: 400px;
+}
+
+.nav-bar {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.nav-links li {
+  margin-left: 20px;
+  margin: 5px;
+}
+
+.nav-links a, .login-btn {
+  text-decoration: none;
+  color: #000000;
+  background-color: #ffffff;
+  padding: 10px 20px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.nav-links a:hover, .login-btn:hover {
+  background-color: #2980b9;
+}
+
+main {
+  padding: 50px 5%;
+}
+
+/*Sliding*/
+
+/* Carousel Container */
+
+.carousel-container {
+width: 100%;
+overflow: hidden;
+margin: 20px auto;
+position: relative;
+}
+
+.carousel {
+display: flex;
+transition: transform 1.5s linear;
+animation: slide 15s infinite linear; 
+}
+
+.carousel-item {
+min-width: 33.33%;
+position: relative;
+padding: 10px;
+}
+
+.carousel-image {
+width: 400px;
+height: 300px;
+border-radius: 25px;
+padding: 18px;
+}
+
+.carousel-description {
+position: absolute;
+bottom: 10px;
+left: 10px;
+background-color: rgba(0, 0, 0, 0.6);
+color: white;
+padding: 10px;
+border-radius: 5px;
+opacity: 0;
+transition: opacity 0.3s ease-in-out;
+}
+
+.carousel-item:hover .carousel-description {
+opacity: 1;
+}
+
+@keyframes slide {
+0% { transform: translateX(0); }
+100% { transform: translateX(-100%); } 
+}
+
+/* Background gradient */
+.landing-page {
+background: linear-gradient(to bottom, rgb(219, 219, 219), #40b9e9); /* Beautiful blue */
+}
+
+
+.tour-section {
+display: flex;
+justify-content: center;
+align-items: center;
+padding: 20px;
+}
+
+/* Footer font */
+footer {
+font-family: 'Roboto', sans-serif;
+color: #333;
+}
+
+@media (max-width: 768px) {
+.carousel-item {
+  min-width: 100%;
+}
+
+.carousel-description {
+  font-size: 14px;
+  padding: 5px;
+}
+}
+
+
+/* Tour Section */
+.tour-section {
+  margin-top: 8px;
+}
+
+.clickable-image {
+  position: relative; /* Allows absolute positioning of the hover text */
+  display: inline-block; /* Makes sure the span is positioned relative to the image */
+  text-decoration: none; /* Removes underline from the link */
+}
+
+.tour-image {
+  max-width: 100%; /* Ensures the image does not overflow the container */
+  height: auto; /* Maintains aspect ratio */
+  width: 800px;
+  border-radius: 8px; /* Optional: Rounded corners */
+}
+
+.hover-tour {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: rgba(0, 0, 0, 0.7);
+  color: white;
+  padding: 5px 10px;
+  border-radius: 5px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  font-size: 20px; 
+}
+
+.clickable-image:hover .hover-tour {
+  opacity: 8;
+}
+
+/*About*/
+.about-section {
+  margin-top: 45px;
+}
+
+.about-section h3 {
+  margin-bottom: 10px;
+}
+
+.about-image {
+  max-width: 100%;
+  height: auto; 
+  margin: 20px 0;
+  border-radius: 8px;
+}
+
+/*Notification and side responsiveness*/
+
+/* For the notification panel and other sections */
+.notification-container {
+  background-color: #f7f7f7;
+  padding: 2rem;
+}
+
+.notification-item:hover {
+  background-color: #ccc;
+}
+
+
+/*Footer*/
+  
+  footer {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    background-color: #2c3e50;
+    color: #fff;
+    padding: 30px 5%;
+    flex-wrap: wrap;
+  }
+  
+  .footer-section {
+    width: 12.5%;
+  }
+
+  .footer-section-contact {
+    width: 13%;
+  }
+
+  .footer-section-quick a {
+    color: rgb(255, 255, 255);
+    text-decoration: underline; 
+    transition: color 0.3s ease;
+  }
+  
+  .footer-section-quick a:hover {
+    color: #3498db;
+  }
+  
+  .social a img {
+    width: 25px;
+    margin-right: 4.5px;
+  }
+  
+  footer .copyright {
+    width: 100%;
+    text-align: center;
+    margin-top: 20px;
+    color: #bbb;
+  }
+  
+  @media (max-width: 768px) {
+    .footer-section {
+      width: 50%;
+      margin-bottom: 20px;
+    }
+  
+    nav ul {
+      width: 100%;
+      justify-content: space-between;
+    }
+  }

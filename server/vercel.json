@@ -1,0 +1,29 @@
+{
+  "version": 2,
+  "routes": [
+    {
+      "src": "/api/notapi/(.*)",
+      "dest": "/api/notapi.js"
+    },
+    {
+      "src": "/api/emapi/(.*)",
+      "dest": "api/emapi.js"
+    },
+    {
+      "src": "/api/ratapi/(.*)",
+      "dest": "api/ratapi.js"
+    },
+    {
+      "src": "/api/storage/(.*)",
+      "dest": "api/storage.js"
+    },
+    {
+      "src": "/api/users/(.*)",
+      "dest": "api/users.js"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "api/app.js"
+    }
+  ]
+}
